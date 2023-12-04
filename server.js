@@ -4,7 +4,7 @@ const path = require("path")
 const fs = require("fs-extra")
 
 const multer = require('multer')
-
+app.use("/uploads", express.static("uploadingfile"))
 const storage = multer.diskStorage({
     destination: (req, file, cb)=>{
         let path ='uploadingfile'
